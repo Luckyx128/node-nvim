@@ -22,4 +22,18 @@ lspconfig.ts_ls.setup {
    on_init = nvlsp.on_init,
    capabilities = nvlsp.capabilities,
 }
+lspconfig.pyright.setup {
+  on_attach = nvlsp.on_attach,
+  on_init = nvlsp.on_init,
+  capabilities = nvlsp.capabilities,
+  settings = {
+    python = {
+      analysis = {
+        typeCheckingMode = "off", -- ou "basic", "off"
+        autoSearchPaths = true,
+        useLibraryCodeForTypes = true,
+      },
+    },
+  },
+}
 

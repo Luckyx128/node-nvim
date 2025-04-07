@@ -32,7 +32,15 @@ return {
     event = "VeryLazy",
     dependencies = { "nvim-lua/plenary.nvim" },
     config = true,
-  }-- {
+  },
+  {
+    "L3MON4D3/LuaSnip",
+    config = function()
+      require("custom.configs.luasnip")
+    end,
+  },
+
+  -- {
   -- 	"nvim-treesitter/nvim-treesitter",
   -- 	opts = {
   -- 		ensure_installed = {
