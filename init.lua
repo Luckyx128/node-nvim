@@ -14,6 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 
 local lazy_config = require "configs.lazy"
 
+vim.env.SUPERMAVEN_API_KEY = "sua_api_key_aqui"
 -- load plugins
 require("lazy").setup({
   {

@@ -6,12 +6,28 @@
 local M = {}
 
 M.base46 = {
-	theme = "catppuccin",
+	theme = "chadracula-evondev",
 
-	hl_override = {
-		Comment = { italic = true },
-		["@comment"] = { italic = true },
-	},
+	-- hl_override = {
+	-- 	Comment = { italic = true },
+	-- 	["@comment"] = { italic = true },
+	-- },
 }
+M.ui = {
+   statusline = {
+     theme = "default",
+     separator_style = "round",
+     order = { "mode", "f", "git", "%=", "lsp_msg", "%=" ,"lsp", "cwd", "xyz", "abc" },
+     modules = {
+       abc = function()
+         return "hi"
+       end,
 
-return M
+       xyz =  "hi",
+       f = "%F"
+     }
+   },
+ }
+return M;
+
+
